@@ -29,6 +29,7 @@
 .logo {
   text-transform: uppercase;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .toggle {
@@ -40,6 +41,11 @@
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.toggle:hover {
+  transform: scale(1.5);
 }
 
 .toggle.active {
