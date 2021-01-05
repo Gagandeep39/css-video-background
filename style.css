@@ -41,6 +41,13 @@
   cursor: pointer;
 }
 
+.toggle.active {
+  background: url(./assets/close.svg);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .showcase header {
   position: absolute;
   top: 0;
@@ -55,6 +62,110 @@
   justify-content: space-between;
 }
 
-.menu {
-  /* display: none; */
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Scale image */
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.text {
+  position: relative;
+  /* Ensures its above video */
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #646464;
+  mix-blend-mode: overlay;
+}
+
+.text h2 {
+  /* multiple parent font size by 5 */
+  font-size: 5em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  /* multiple parent font size by 5 */
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text p {
+  /* multiple parent font size by 5 */
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 400;
+  /* Must not expand content after 700px */
+  max-width: 700px;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #111;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: letter-spacing 0.2s;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+.social {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 30px;
+  transform: scale(2);
+  color: #fff;
+  transition: 0.2s;
+}
+
+.social li a:hover {
+  transform: scale(2.4) translateY(-15px);
+}
+
+@media (max-width: 991px) {
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+  .text h2 {
+    font-size: 3em;
+  }
+  .text h3 {
+    font-size: 2em;
+  }
 }
